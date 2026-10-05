@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field Notes | A Blog About Trails, Gear and Slow Travel</title>
+  <meta name="description" content="Field Notes is a blog with trail guides, gear reviews and practical tips for slow travel.">
+
+  <!-- Bootstrap CSS, then our overrides -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute p-3 bg-warning" href="#main">Skip to main content</a>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-md sticky-top site-nav" aria-label="Main">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Field Notes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nav-menu" aria-controls="nav-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#posts">Posts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Featured post -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="hero__meta">Featured &middot; 12 min read</p>
+        <h1 id="hero-title" class="hero__title">Seven days on the Coast Ridge Trail with a 6 kg pack</h1>
+        <p class="hero__lead">What I carried, what I left behind, and the one item I would pack again without thinking.</p>
+        <a href="#" class="btn btn-warning btn-lg">Read the story</a>
+      </div>
+    </section>
+
+    <div class="container py-5">
+      <div class="row g-5">
+
+        <!-- Posts column -->
+        <div class="col-lg-8" id="posts">
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+            <h2 class="h3 m-0">Latest posts</h2>
+            <div class="btn-group flex-wrap" role="group" aria-label="Filter posts by category" id="filters">
+              <button type="button" class="btn btn-outline-dark btn-sm active" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="btn btn-outline-dark btn-sm" data-filter="trails" aria-pressed="false">Trails</button>
+              <button type="button" class="btn btn-outline-dark btn-sm" data-filter="gear" aria-pressed="false">Gear</button>
+              <button type="button" class="btn btn-outline-dark btn-sm" data-filter="tips" aria-pressed="false">Tips</button>
+            </div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4" id="post-grid">
+            <div class="col" data-category="trails">
+              <article class="card h-100 post-card">
+                <div class="post-thumb thumb-1" role="img" aria-label="Illustration of a mountain ridge at dawn"></div>
+                <div class="card-body">
+                  <span class="badge text-bg-success mb-2">Trails</span>
+                  <h3 class="h5 card-title"><a href="#" class="stretched-link text-reset text-decoration-none">A quiet loop above the cloud line</a></h3>
+                  <p class="card-text">An easy 14 km route with big views and almost no crowds, even in peak season.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 small text-body-secondary">
+                  <time datetime="2026-09-28">28 Sep 2026</time> &middot; 6 min read
+                </div>
+              </article>
+            </div>
+
+            <div class="col" data-category="gear">
+              <article class="card h-100 post-card">
+                <div class="post-thumb thumb-2" role="img" aria-label="Illustration of a camping stove"></div>
+                <div class="card-body">
+                  <span class="badge text-bg-primary mb-2">Gear</span>
+                  <h3 class="h5 card-title"><a href="#" class="stretched-link text-reset text-decoration-none">Three stoves tested in the rain</a></h3>
+                  <p class="card-text">Boil times, fuel use and how each one handled wind on an exposed campsite.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 small text-body-secondary">
+                  <time datetime="2026-09-21">21 Sep 2026</time> &middot; 8 min read
+                </div>
+              </article>
+            </div>
+
+            <div class="col" data-category="tips">
+              <article class="card h-100 post-card">
+                <div class="post-thumb thumb-3" role="img" aria-label="Illustration of a folded map"></div>
+                <div class="card-body">
+                  <span class="badge text-bg-warning mb-2">Tips</span>
+                  <h3 class="h5 card-title"><a href="#" class="stretched-link text-reset text-decoration-none">How to read a topo map in ten minutes</a></h3>
+                  <p class="card-text">Contour lines, scale and the three checks I make before every hike.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 small text-body-secondary">
+                  <time datetime="2026-09-14">14 Sep 2026</time> &middot; 5 min read
+                </div>
+              </article>
+            </div>
+
+            <div class="col" data-category="trails">
+              <article class="card h-100 post-card">
+                <div class="post-thumb thumb-4" role="img" aria-label="Illustration of a lake at sunset"></div>
+                <div class="card-body">
+                  <span class="badge text-bg-success mb-2">Trails</span>
+                  <h3 class="h5 card-title"><a href="#" class="stretched-link text-reset text-decoration-none">Lakeside camping without the crowds</a></h3>
+                  <p class="card-text">Four lesser-known lakes where you can pitch a tent and have the shore to yourself.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 small text-body-secondary">
+                  <time datetime="2026-09-07">7 Sep 2026</time> &middot; 7 min read
+                </div>
+              </article>
+            </div>
+
+            <div class="col" data-category="gear">
+              <article class="card h-100 post-card">
+                <div class="post-thumb thumb-5" role="img" aria-label="Illustration of a hiking boot"></div>
+                <div class="card-body">
+                  <span class="badge text-bg-primary mb-2">Gear</span>
+                  <h3 class="h5 card-title"><a href="#" class="stretched-link text-reset text-decoration-none">Boots or trail runners? A 500 km verdict</a></h3>
+                  <p class="card-text">Blisters, grip and weight after a full season of wearing both.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 small text-body-secondary">
+                  <time datetime="2026-08-30">30 Aug 2026</time> &middot; 9 min read
+                </div>
+              </article>
+            </div>
+
+            <div class="col" data-category="tips">
+              <article class="card h-100 post-card">
+                <div class="post-thumb thumb-6" role="img" aria-label="Illustration of a backpack"></div>
+                <div class="card-body">
+                  <span class="badge text-bg-warning mb-2">Tips</span>
+                  <h3 class="h5 card-title"><a href="#" class="stretched-link text-reset text-decoration-none">Packing for a weekend in 20 minutes</a></h3>
+                  <p class="card-text">A simple checklist that stops you forgetting the one thing you always forget.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 small text-body-secondary">
+                  <time datetime="2026-08-23">23 Aug 2026</time> &middot; 4 min read
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <p id="no-results" class="alert alert-info mt-4" role="status" hidden>
+            No posts match your search. Try a different word or choose another category.
+          </p>
+
+          <nav class="mt-5" aria-label="Posts pagination">
+            <ul class="pagination justify-content-center flex-wrap">
+              <li class="page-item disabled"><span class="page-link">Previous</span></li>
+              <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="col-lg-4" aria-label="Sidebar">
+          <div class="sidebar">
+            <section class="side-box" aria-labelledby="search-title">
+              <h2 id="search-title" class="h5">Search</h2>
+              <label for="search" class="visually-hidden">Search posts</label>
+              <input id="search" type="search" class="form-control" placeholder="Search posts" autocomplete="off">
+            </section>
+
+            <section class="side-box" id="about" aria-labelledby="about-title">
+              <h2 id="about-title" class="h5">About</h2>
+              <p class="mb-0">Field Notes shares honest trail reports and gear tests from someone who carries every item on this site.</p>
+            </section>
+
+            <section class="side-box" id="newsletter" aria-labelledby="news-title">
+              <h2 id="news-title" class="h5">Get new posts by email</h2>
+              <form id="newsletter-form" novalidate>
+                <label for="email" class="form-label">Email address</label>
+                <input id="email" type="email" class="form-control" autocomplete="email" required>
+                <div class="invalid-feedback">Enter a valid email address, like name@example.com.</div>
+                <button type="submit" class="btn btn-dark w-100 mt-3">Subscribe</button>
+                <p id="news-status" class="mt-3 mb-0 fw-semibold" role="status" aria-live="polite"></p>
+              </form>
+            </section>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+      <p class="mb-0">&copy; <span id="year">2026</span> Field Notes. All rights reserved.</p>
+      <p class="mb-0"><a href="#">Privacy</a> &middot; <a href="#">Contact</a></p>
+    </div>
+  </footer>
+
+  <button id="to-top" class="btn btn-warning to-top" type="button" aria-label="Back to top" hidden>&uarr;</button>
+
+  <!-- Bootstrap JS (needed for the mobile menu), then our script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Custom styles on top of Bootstrap. Mobile first: base styles are for
+   phones, and media queries add changes as the screen gets wider. */
+
+:root {
+  --ink: #17252a;
+  --forest: #1f3d36;
+  --sand: #f3efe6;
+  --gold: #ffc233;
+}
+
+body {
+  color: var(--ink);
+  background: #fbfaf7;
+  line-height: 1.65;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------- Navbar ---------- */
+.site-nav {
+  background: var(--forest);
+}
+.site-nav .navbar-brand,
+.site-nav .nav-link {
+  color: #fff;
+}
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  color: var(--gold);
+}
+.site-nav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+  /* white hamburger icon on the dark navbar */
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---------- Hero (phone size) ---------- */
+.hero {
+  padding: 3rem 0;
+  color: #fff;
+  background: linear-gradient(135deg, #1f3d36 0%, #35695c 60%, #5b8f6f 100%);
+}
+.hero__meta {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.hero__title {
+  max-width: 20ch;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+.hero__lead {
+  max-width: 55ch;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+/* ---------- Post cards ---------- */
+.post-card {
+  border: 1px solid #e3ded2;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.post-thumb {
+  height: 140px; /* shorter on phones */
+}
+.thumb-1 { background: linear-gradient(135deg, #274e63, #7fb0a5); }
+.thumb-2 { background: linear-gradient(135deg, #8a3b12, #f0a04b); }
+.thumb-3 { background: linear-gradient(135deg, #3d405b, #b8b8d1); }
+.thumb-4 { background: linear-gradient(135deg, #14532d, #86c5a1); }
+.thumb-5 { background: linear-gradient(135deg, #5a3825, #c99a6b); }
+.thumb-6 { background: linear-gradient(135deg, #7a1f3d, #e59ab0); }
+
+/* ---------- Sidebar ---------- */
+.side-box {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: var(--sand);
+  border-radius: 0.75rem;
+}
+
+/* ---------- Footer & back to top ---------- */
+.site-footer {
+  padding: 1.5rem 0;
+  color: #d8e3df;
+  background: var(--forest);
+  text-align: center;
+}
+.site-footer a {
+  color: #fff;
+}
+
+.to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+}
+.to-top[hidden] {
+  display: none;
+}
+
+/* ---------------------------------------------------------------
+   MEDIA QUERIES (mobile first, so each one adds to the one before)
+---------------------------------------------------------------- */
+
+/* Small devices: 576px and up (large phones, landscape) */
+@media (min-width: 576px) {
+  .hero__title { font-size: 2.25rem; }
+  .post-thumb { height: 160px; }
+  .site-footer { text-align: left; }
+}
+
+/* Medium devices: 768px and up (tablets) */
+@media (min-width: 768px) {
+  .hero { padding: 4.5rem 0; }
+  .hero__title { font-size: 2.75rem; }
+  .post-thumb { height: 170px; }
+
+  /* Navbar links get a little more breathing room */
+  .site-nav .nav-link { padding-inline: 1rem; }
+}
+
+/* Large devices: 992px and up (laptops). Sidebar sits beside posts. */
+@media (min-width: 992px) {
+  .hero { padding: 6rem 0; }
+  .hero__title { font-size: 3.25rem; }
+  .post-thumb { height: 180px; }
+
+  /* The sidebar follows you as you scroll the posts */
+  .sidebar {
+    position: sticky;
+    top: 5rem;
+  }
+}
+
+/* Extra large devices: 1200px and up (desktops) */
+@media (min-width: 1200px) {
+  .hero__title { font-size: 3.75rem; }
+  .hero__lead { font-size: 1.25rem; }
+  .post-thumb { height: 200px; }
+}
+
+/* Very small phones: under 360px */
+@media (max-width: 359.98px) {
+  .hero__title { font-size: 1.6rem; }
+  .btn-group { width: 100%; }
+  .btn-group .btn { flex: 1 1 50%; }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { padding: 2rem 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-card { transition: none; }
+  .post-card:hover { transform: none; }
+  html { scroll-behavior: auto; }
+}
+@media print {
+  .site-nav,
+  .sidebar,
+  .to-top,
+  #filters,
+  .pagination { display: none !important; }
+  .hero { color: #000; background: none; padding: 1rem 0; }
+}
